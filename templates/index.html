@@ -64,13 +64,24 @@
             margin-top: 50px;
             text-align: center;
         }
+        p{
+            max-width: 600px;
+            line-height: 1.6;
+            font-size: large;
+            color: #555;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-top: -10px;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Vibe Coffee Co.</h1>
-        <p>Live Inventory Menu</p>
+        <p class="subtitle">Live Inventory Menu</p>
     </header>
 
     <div class="menu-container">
@@ -84,9 +95,17 @@
         {% endfor %}
     </div>
 
+    <p>
+        Since this data is all sourced from a Google Sheet, you can update it by simply editing the sheet and refreshing this page. No need to redeploy or change any code! (<em>But there are better ways to make websites.</em>)
+    </p>
+
+    <p>
+        This solution is NOT professional-grade and is meant for demonstration purposes only. In a production environment, you would want to implement caching, error handling, and security measures to protect your data and ensure reliability. But this is actually pretty-decent as a datasource, if you are insistent on vibe-coding apps...
+    </p>
+
     <footer>
         <p style="font-size: 0.8rem; color: #aaa;">Data sourced from Google Sheets</p>
-        <p style="font-size: 0.8rem; color: #aaa;"><a href="{{ CSV_URL }}" target="_blank" style="color: #aaa; text-decoration: underline;">>> download the raw CSV for yourself</a></p>
+        <p style="font-size: 0.8rem; color: #aaa;"><a href="{{ CSV_URL }}" target="_blank" style="color: #aaa; text-decoration: underline;">>> download the raw CSV for yourself <<</a></p>
         <p style="font-size: 0.8rem; color: #aaa;">Built with Flask & Python</p>
 
     </footer>
