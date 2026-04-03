@@ -1,0 +1,1 @@
+Make your own spreadsheet to match this example one: [coffee-shop-data/copy](https://docs.google.com/spreadsheets/d/1TdeCvbScLdZcFnfoobxCAtdztljMh2ssm2IRvq1xnHU/copy)
