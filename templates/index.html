@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coffee Co. | Live Menu</title>
+    <style>
+        :root {
+            --bg: #fdfaf7;
+            --text: #2d241e;
+            --accent: #bc8a5f;
+        }
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            max-width: 600px;
+            padding-bottom: 20px;
+        }
+        h1 { font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
+        .menu-container {
+            width: 100%;
+            max-width: 600px;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+        .item-name {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        .item-dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #ccc;
+            margin: 0 10px;
+        }
+        .item-price {
+            font-family: monospace;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .stock-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #888;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vibe Coffee Co.</h1>
+        <p>Live Inventory Menu</p>
+    </header>
+
+    <div class="menu-container">
+        {% for item in items %}
+        <div class="item">
+            <span class="item-name">{{ item.name }}</span>
+            <span class="item-dots"></span>
+            <span class="item-price">{{ item.price }}</span>
+        </div>
+        <div class="stock-tag">Orders to date: {{ item.count }}</div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
