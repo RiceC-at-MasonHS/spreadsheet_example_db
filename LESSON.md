@@ -84,6 +84,11 @@ docker compose down
 docker compose up --build -d
 ```
 
+### Step 3: 📸 Take a Screenshot
+You should collect a screenshot to submit for this assignment. The screenshot should be fullscreen, show your name on the website 'Vibe Coffee Co.' website, and show your copy of the spreadsheet. Ideally, your name or Google user-icon would also be clearly visible. 
+
+Submit this screenshot to the assignment in Schoology. 
+
 ---
 
 ## 🧪 Test Your Knowledge
