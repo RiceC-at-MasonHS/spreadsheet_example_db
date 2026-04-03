@@ -5,6 +5,7 @@ import io
 
 app = Flask(__name__)
 
+# Google Sheets CSV export URL - This is allowed for 'public' download
 CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTOJSjMWjpTEpNjEcTGwpo_t6gREpp_6tXQhsif1LXgR8tNWVfll7sUYQPS4tNowJLLMhSUzkF093LG/pub?gid=1999930924&single=true&output=csv"
 
 def get_coffee_data():
@@ -18,7 +19,7 @@ def get_coffee_data():
 def index():
     try:
         items = get_coffee_data()
-        return render_template('index.html', items=items)
+        return render_template('index.html', items=items, CSV_URL=CSV_URL)
     except Exception as e:
         return f"Error loading menu: {e}"
 

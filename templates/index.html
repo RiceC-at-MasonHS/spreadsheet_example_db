@@ -60,6 +60,10 @@
             margin-top: -10px;
             margin-bottom: 20px;
         }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -80,5 +84,11 @@
         {% endfor %}
     </div>
 
+    <footer>
+        <p style="font-size: 0.8rem; color: #aaa;">Data sourced from Google Sheets</p>
+        <p style="font-size: 0.8rem; color: #aaa;"><a href="{{ CSV_URL }}" target="_blank" style="color: #aaa; text-decoration: underline;">>> download the raw CSV for yourself</a></p>
+        <p style="font-size: 0.8rem; color: #aaa;">Built with Flask & Python</p>
+
+    </footer>
 </body>
 </html>
