@@ -104,10 +104,10 @@ Submit this screenshot to the assignment in Schoology.
 2.  **Why use a database instead of a spreadsheet?** (Think about what happens if 1,000 people try to edit the same row at the same time!)
 3.  **Data Integrity:** What happens if you change a "Price" in the spreadsheet to a word (like "FREE")? Does the app break?
 4.  **Threats:** What are the obvious ways that this kind of data source be manipulated to deface the website? 
-5.  **C.I.A. tirad:** Cybersecurity talks about **Confidentiality**, **Integrity**, and **Availability** of data. How would this coffee shop, and its Google Sheets data relate to these goals?
-    - What data needs to (or should) remain **confedential**? How can you keep it that way with a Google Sheet? Are there risks in this tech stack which could accidentally violate confidentiality?
-    - Data with '**integrity**' means the data is not unduly manipulated (by a bad actor) or changes so slowly that it is critically out-of-date. How does a Google Sheets db support that, or make it vulnerable?
-    - The **availability** of data means that those who need to access it can do so without delay or interruption. How does this setup support or detract from that? 
+5.  **C.I.A. triad:** Cybersecurity talks about **Confidentiality**, **Integrity**, and **Availability** of data. How would this coffee shop, and its Google Sheets data relate to these goals?
+    - What data needs to (or should) remain **confidential**? How can you keep it that way with a Google Sheet? Are there risks in this tech stack which could accidentally violate confidentiality?
+    - Data with '**integrity**' means the data is not unduly manipulated (by a bad actor) or changes so slowly that it is critically out-of-date. How does a Google Sheets db support integrity, or make it vulnerable? || Would this solution be good for stock tracking? blogging? a list of your favorite movies? a viral-trending webapp?
+    - The **availability** of data means that those who need to access it can do so without delay or interruption. How does this setup support or detract from the data's availability? 
 
 ---
 
