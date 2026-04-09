@@ -13,7 +13,7 @@ You will learn how to:
 ## 🚀 Quick Start
 
 ### 0. Open Debian, Download the code. 
-You need to ge the code onto your computer, and youself in the right place to start this work. 
+You need to get the code onto your computer, and yourself in the right place to start this work. 
 ```bash
 # download the code from github
 git clone https://github.com/RiceC-at-MasonHS/spreadsheet_example_db.git
