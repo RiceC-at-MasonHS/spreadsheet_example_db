@@ -55,6 +55,13 @@ The data you see on the website is actually living in a **Google Sheet**.
 
 **Think about:** If you were to add a new row to this spreadsheet, what would happen to the website? (In this demo, the sheet is "Published to Web" as a CSV, which the app fetches every time you refresh).
 
+**Why this is great for "Vibe-Coding":**
+- **No Database**: You don't need to manage SQL. Just type a new price into your Google Sheet, hit refresh on the website, and it's there.
+- **Lightweight**: The requests library treats the CSV as a simple text stream.
+- **Scalable (Sort of)**: If you add more columns to your sheet (like description or category), you just update the HTML to display `{{ item.description }}`.
+
+**Note on Google Sheets**: Google caches the "Published" CSV for about 5 minutes. If you change a price in the sheet and it doesn't update immediately on the site, just give it a few minutes for Google's public URL to refresh!
+
 ### Mission 1: Under the Hood (CSV)
 Databases often export data in **CSV** (Comma-Separated Values) format. It's the "universal language" of data.
 
@@ -64,7 +71,7 @@ Databases often export data in **CSV** (Comma-Separated Values) format. It's the
 
 This is exactly what the Python code sees! It "parses" these lines of text and turns them into the beautiful menu you see in your browser.
 
-Generally, this is how databases of all types do their thing. It's not a bad analogy to think of databases as 'headless' spreadsheets.
+Generally, this is how databases of all types do their thing. It's not a bad analogy to think of databases as 'headless' spreadsheets. Databases are *nearly* really just spreadsheets that never show up on anyone's screen, and we really only use code (99.99+ percent of the time) to get data in or out of them.
 
 ---
 
@@ -114,6 +121,11 @@ Submit this screenshot to the assignment in Schoology.
 1.  **What is a CSV file?** How does it differ from a regular spreadsheet?
 2.  **Why use a database instead of a spreadsheet?** (Think about what happens if 1,000 people try to edit the same row at the same time!)
 3.  **Data Integrity:** What happens if you change a "Price" in the spreadsheet to a word (like "FREE")? Does the app break?
+4.  **Threats:** What are the obvious ways that this kind of data source be manipulated to deface the website? 
+5.  **C.I.A. triad:** Cybersecurity talks about **Confidentiality**, **Integrity**, and **Availability** of data. How would this coffee shop, and its Google Sheets data relate to these goals?
+    - What data needs to (or should) remain **confidential**? How can you keep it that way with a Google Sheet? Are there risks in this tech stack which could accidentally violate confidentiality?
+    - Data with '**integrity**' means the data is not unduly manipulated (by a bad actor) or changes so slowly that it is critically out-of-date. How does a Google Sheets db support integrity, or make it vulnerable? || Would this solution be good for stock tracking? blogging? a list of your favorite movies? a viral-trending webapp?
+    - The **availability** of data means that those who need to access it can do so without delay or interruption. How does this setup support or detract from the data's availability? 
 
 ---
 
