@@ -4,6 +4,7 @@ A teaching tool designed to demonstrate that databases aren't magic—they're ju
 
 > [!IMPORTANT]
 > **Students & Learners:** For the guided lab instructions and missions, please see [**LESSON.md**](./LESSON.md).
+>
 > ------------------------ This is your "onramp" to learning more complex database systems!
 
 ---
